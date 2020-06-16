@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 #include "QDialog"
+#include <QPainter>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -28,4 +29,10 @@ void MainWindow::on_pushButton_clicked()
 {
     QDialog *dlg = new QDialog(this);
     dlg->show();
+}
+
+void MainWindow::paintEvent(QPaintEvent *)
+{
+    QPainter painter(this);
+    painter.drawLine(QPointF(0, 0), QPointF(100, 100));
 }

@@ -14,32 +14,32 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog.ui" line="42"/>
+        <location filename="dialog.ui" line="45"/>
         <source>请输入用户名</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog.ui" line="58"/>
+        <location filename="dialog.ui" line="62"/>
         <source>请输入密码</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog.ui" line="71"/>
+        <location filename="dialog.ui" line="95"/>
         <source>用户名:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog.ui" line="84"/>
+        <location filename="dialog.ui" line="52"/>
         <source>密码：</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog.ui" line="97"/>
+        <location filename="dialog.ui" line="88"/>
         <source>登录</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="dialog.ui" line="110"/>
+        <location filename="dialog.ui" line="69"/>
         <source>退出</source>
         <translation type="unfinished"></translation>
     </message>
@@ -92,12 +92,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="14"/>
+        <location filename="mainwindow.cpp" line="15"/>
         <source>&amp;Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.cpp" line="16"/>
+        <location filename="mainwindow.cpp" line="17"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
