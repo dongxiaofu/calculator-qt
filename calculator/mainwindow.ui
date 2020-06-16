@@ -40,30 +40,21 @@
      <height>22</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuHello">
+   <widget class="QMenu" name="menu_F">
     <property name="title">
-     <string>Hello</string>
+     <string>文件(&amp;F)</string>
     </property>
+    <addaction name="actionNew_N"/>
    </widget>
-   <widget class="QMenu" name="menuworld">
-    <property name="title">
-     <string>world</string>
-    </property>
-    <addaction name="action1"/>
-    <addaction name="action2"/>
-   </widget>
-   <addaction name="menuHello"/>
-   <addaction name="menuworld"/>
+   <addaction name="menu_F"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="action1">
+  <action name="actionNew_N">
    <property name="text">
-    <string>1</string>
+    <string>New(&amp;N)</string>
    </property>
-  </action>
-  <action name="action2">
-   <property name="text">
-    <string>2</string>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
    </property>
   </action>
  </widget>

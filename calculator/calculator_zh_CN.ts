@@ -78,22 +78,27 @@
     </message>
     <message>
         <location filename="mainwindow.ui" line="45"/>
-        <source>Hello</source>
+        <source>文件(&amp;F)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="50"/>
-        <source>world</source>
+        <location filename="mainwindow.ui" line="54"/>
+        <source>New(&amp;N)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="61"/>
-        <source>1</source>
+        <location filename="mainwindow.ui" line="57"/>
+        <source>Ctrl+N</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="mainwindow.ui" line="66"/>
-        <source>2</source>
+        <location filename="mainwindow.cpp" line="14"/>
+        <source>&amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="mainwindow.cpp" line="16"/>
+        <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
