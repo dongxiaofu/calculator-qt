@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QCloseEvent>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -22,6 +23,9 @@ public:
     bool saveFile(const QString &filenamne);
     bool loadFile(const QString &fileName); // 加载文件
 
+protected:
+    void closeEvent(QCloseEvent *event); // 关闭事件
+
 private slots:
     void on_actionNew_triggered();
 
@@ -32,6 +36,14 @@ private slots:
     void on_actionOpen_triggered();
 
     void on_actionClose_triggered();
+
+    void on_actionundo_triggered();
+
+    void on_actioncut_triggered();
+
+    void on_actioncopy_triggered();
+
+    void on_actionpast_triggered();
 
 private:
     Ui::MainWindow *ui;

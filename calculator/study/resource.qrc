@@ -7,5 +7,11 @@
         <file>document-save.png</file>
         <file>document-new.png</file>
         <file>document-save-as.png</file>
+        <file>document-revert.png</file>
+        <file>find.png</file>
+        <file>edit-paste.png</file>
+        <file>edit-copy.png</file>
+        <file>edit-cut.png</file>
+        <file>edit-undo.png</file>
     </qresource>
 </RCC>

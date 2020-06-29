@@ -135,6 +135,16 @@ bool MainWindow::loadFile(const QString &fileName)
    return true;
 }
 
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+   // 如果maybeSave()函数返回true，则关闭程序
+   if (maybeSave()) {
+       event->accept();
+   } else {   // 否则忽略该事件
+       event->ignore();
+   }
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -175,4 +185,24 @@ void MainWindow::on_actionClose_triggered()
     if (maybeSave()) {
            ui->textEdit->setVisible(false);
        }
+}
+
+void MainWindow::on_actionundo_triggered()
+{
+    ui->textEdit->undo();
+}
+
+void MainWindow::on_actioncut_triggered()
+{
+    ui->textEdit->cut();
+}
+
+void MainWindow::on_actioncopy_triggered()
+{
+    ui->textEdit->copy();
+}
+
+void MainWindow::on_actionpast_triggered()
+{
+    ui->textEdit->paste();
 }
