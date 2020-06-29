@@ -75,7 +75,19 @@ bool MainWindow::maybeSave()
 }
 
 bool MainWindow::save() {
-    return saveFile(curFile);
+    if (isUntitled) {
+           return saveAs();
+       } else {
+           return saveFile(curFile);
+       }
+}
+
+bool MainWindow::saveAs()
+{
+   QString fileName = QFileDialog::getSaveFileName(this,
+                                         tr("另存为"),curFile);
+   if (fileName.isEmpty()) return false;
+   return saveFile(fileName);
 }
 
 bool MainWindow::saveFile(const QString &fileName)
@@ -117,4 +129,9 @@ void MainWindow::on_actionNew_triggered()
 void MainWindow::on_actionSave_triggered()
 {
     save();
+}
+
+void MainWindow::on_actionSave_as_triggered()
+{
+    saveAs();
 }

@@ -18,12 +18,15 @@ public:
     void newFile();   // 新建操作
     bool maybeSave();
     bool save();
+    bool saveAs();
     bool saveFile(const QString &filenamne);
 
 private slots:
     void on_actionNew_triggered();
 
     void on_actionSave_triggered();
+
+    void on_actionSave_as_triggered();
 
 private:
     Ui::MainWindow *ui;

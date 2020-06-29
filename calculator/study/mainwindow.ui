@@ -42,6 +42,7 @@
     <addaction name="actionClose"/>
     <addaction name="separator"/>
     <addaction name="actionSave"/>
+    <addaction name="actionSave_as"/>
     <addaction name="separator"/>
    </widget>
    <addaction name="menu"/>
@@ -63,6 +64,7 @@
    </attribute>
    <addaction name="actionOpen"/>
    <addaction name="actionSave"/>
+   <addaction name="actionSave_as"/>
    <addaction name="actionNew"/>
    <addaction name="actionClose"/>
   </widget>
@@ -115,6 +117,18 @@
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="resource.qrc">
+     <normaloff>:/style/document-save-as.png</normaloff>:/style/document-save-as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save as</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+A</string>
    </property>
   </action>
  </widget>
