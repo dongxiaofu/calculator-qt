@@ -115,6 +115,26 @@ bool MainWindow::saveFile(const QString &fileName)
    return true;
 }
 
+bool MainWindow::loadFile(const QString &fileName)
+{
+   QFile file(fileName); // 新建QFile对象
+   if (!file.open(QFile::ReadOnly | QFile::Text)) {
+       QMessageBox::warning(this, tr("多文档编辑器"),
+                             tr("无法读取文件 %1:\n%2.")
+                             .arg(fileName).arg(file.errorString()));
+       return false; // 只读方式打开文件，出错则提示，并返回false
+   }
+   QTextStream in(&file); // 新建文本流对象
+   QApplication::setOverrideCursor(Qt::WaitCursor);
+   // 读取文件的全部文本内容，并添加到编辑器中
+   ui->textEdit->setPlainText(in.readAll());      QApplication::restoreOverrideCursor();
+
+   // 设置当前文件
+   curFile = QFileInfo(fileName).canonicalFilePath();
+   setWindowTitle(curFile);
+   return true;
+}
+
 MainWindow::~MainWindow()
 {
     delete ui;
@@ -134,4 +154,25 @@ void MainWindow::on_actionSave_triggered()
 void MainWindow::on_actionSave_as_triggered()
 {
     saveAs();
+}
+
+void MainWindow::on_actionOpen_triggered()
+{
+    if (maybeSave()) {
+
+           QString fileName = QFileDialog::getOpenFileName(this);
+
+           // 如果文件名不为空，则加载文件
+           if (!fileName.isEmpty()) {
+                loadFile(fileName);
+                ui->textEdit->setVisible(true);
+           }
+       }
+}
+
+void MainWindow::on_actionClose_triggered()
+{
+    if (maybeSave()) {
+           ui->textEdit->setVisible(false);
+       }
 }

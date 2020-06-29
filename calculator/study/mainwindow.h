@@ -20,6 +20,7 @@ public:
     bool save();
     bool saveAs();
     bool saveFile(const QString &filenamne);
+    bool loadFile(const QString &fileName); // 加载文件
 
 private slots:
     void on_actionNew_triggered();
@@ -27,6 +28,10 @@ private slots:
     void on_actionSave_triggered();
 
     void on_actionSave_as_triggered();
+
+    void on_actionOpen_triggered();
+
+    void on_actionClose_triggered();
 
 private:
     Ui::MainWindow *ui;
