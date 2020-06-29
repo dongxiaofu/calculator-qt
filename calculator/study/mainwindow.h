@@ -8,6 +8,9 @@ QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
 
+class QLineEdit;
+class QDialog;
+
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -45,11 +48,18 @@ private slots:
 
     void on_actionpast_triggered();
 
+    void showFindText();
+
+    void on_actionfind_triggered();
+
 private:
     Ui::MainWindow *ui;
     // 为真表示文件没有保存过，为假表示文件已经被保存过了
     bool isUntitled;
     // 保存当前文件的路径
     QString curFile;
+
+    QLineEdit *findLineEdit;
+    QDialog *findDlg;
 };
 #endif // MAINWINDOW_H
